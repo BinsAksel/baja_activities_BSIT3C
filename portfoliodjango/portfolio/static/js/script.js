@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Typed.js
     const typed = new Typed('.auto-type', {
-        strings: ['Vhinz Axl C. Baja', 'a front-end developer.'],
+        strings: ['Vhinz Axl C. Baja', 'a front-end developer.','a back-end developer.'],
         typeSpeed: 70,
         backSpeed: 50,
         loop: true
