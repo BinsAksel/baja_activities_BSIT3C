@@ -1,0 +1,129 @@
+{% load static %}
+
+<!DOCTYPE html>                                                         
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+<header>
+    <div class="user">
+        <img src="{% static 'images/pic.jpg' %}" alt="Profile Picture">
+        <h3 class="name">Vhinz Axl C. Baja</h3>
+        <p class="post">Front-End Developer</p>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#education">education</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="menu" class="fas fa-bars"></div>
+
+<section class="home" id="home">
+    <h3>HI THERE !</h3>
+    <h1>I'm <span class="auto-type"></span></h1>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <p>Hello! My name is Vhinz Axl C. Baja, a 3rd-year student currently pursuing a Bachelor of Science in Information Technology at Gordon College. 
+        With a passion for front-end development and web design, I’m dedicated to honing my coding skills and gaining valuable experience in the tech industry. 
+        This portfolio showcases my journey, projects, and achievements.</p>
+    <a href="#about"><button class="btn">About Me <i class="fas fa-user"></i></button></a>
+</section>
+
+<section class="about" id="about">
+    <h1 class="heading"> <span>About</span> Me </h1>
+
+    <div class="row">
+        <div class="info">
+            <h3> <span>Name:</span> Vhinz Axl C. Baja </h3>
+            <h3> <span>Age:</span> 20 </h3>
+            <h3> <span>Qualification:</span> NCII Passer </h3>
+            <h3> <span>Role:</span> Front-End Developer </h3>
+            <h3> <span>Hobbies:</span> Playing games and watching series</h3>
+            
+            <!-- Download CV -->
+            <a href="{% static 'mypdf/myresume.pdf' %}" download>
+                <button class="btn"> Download CV <i class="fas fa-download"></i></button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+    <h1 class="heading"> My <span>Portfolio</span> </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="{% static 'images/lms.jpg' %}" alt="LMS Project">
+        </div>
+
+        <div class="box">
+            <img src="{% static 'images/fms.png' %}" alt="FMS Project">
+        </div>
+
+        <div class="box">
+            <img src="{% static 'images/image-gallery.jpg' %}" alt="Image Gallery Project">
+        </div>
+
+        <div class="box">
+            <img src="{% static 'images/lms.jpg' %}" alt="LMS Project">
+        </div>
+        
+        <div class="box">
+            <img src="{% static 'images/fms.png' %}" alt="FMS Project">
+        </div>
+        
+        <div class="box">
+            <img src="{% static 'images/image-gallery.jpg' %}" alt="Image Gallery Project">
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h1 class="heading"> <span>Contact</span> Me </h1>
+
+    <div class="row">
+        <div class="content">
+            <h3 class="title"> Contact Info </h3>
+
+            <div class="info">
+                <h3> <i class="fas fa-envelope"></i> bajavhinzaxl@gmail.com </h3>
+                <h3> <i class="fas fa-phone"></i> +639614299982 </h3>
+                <h3> <i class="fab fa-facebook"></i> Vhinz Axl Baja </h3>
+                <h3> <i class="fas fa-map-marker-alt"></i> #0027 Recella Street, Calapandayan, Subic, Zambales</h3>
+            </div>
+        </div>
+
+        <form action="">
+            <input type="text" placeholder="Name" class="box">
+            <input type="email" placeholder="Email" class="box">
+            <input type="text" placeholder="Project" class="box">
+            <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="Message"></textarea>
+            <button type="submit" class="btn"> Send <i class="fas fa-paper-plane"></i> </button>
+        </form>
+    </div>
+</section>
+
+<!-- jQuery CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Link to JavaScript file -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
