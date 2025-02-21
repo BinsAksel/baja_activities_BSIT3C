@@ -1,0 +1,48 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Welcome Message -->
+    <div class="card">
+        <h2 class="section-title">Welcome to the Dashboard</h2>
+        <p>Here's a quick overview of your statistics.</p>
+
+        <!-- Data Cards -->
+        <div class="card-grid">
+            <div class="data-card">
+                <p class="data-value">150</p>
+                <p class="data-title">Users</p>
+            </div>
+            <div class="data-card">
+                <p class="data-value">320</p>
+                <p class="data-title">Orders</p>
+            </div>
+            <div class="data-card">
+                <p class="data-value">$12,450</p>
+                <p class="data-title">Revenue</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activities -->
+    <div class="card">
+        <h2 class="section-title">Recent Activities</h2>
+        <ul class="activity-list">
+            <li><span class="activity-time">10 mins ago</span> - New user registered.</li>
+            <li><span class="activity-time">30 mins ago</span> - Order #1045 has been placed.</li>
+            <li><span class="activity-time">1 hour ago</span> - Revenue update: +$500.</li>
+        </ul>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="card">
+        <h2 class="section-title">Quick Actions</h2>
+        <div class="quick-actions">
+            <button class="action-btn">Add User</button>
+            <button class="action-btn">View Orders</button>
+            <button class="action-btn">Generate Report</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Reports Section -->
+    <div class="card">
+        <h2 class="section-title">Your Reports</h2>
+        <p>Here is an overview of your reports.</p>
+        
+        <!-- Data Cards -->
+        <div class="card-grid">
+            <div class="data-card">
+                <p class="data-value">0</p>
+                <p class="data-title">Total Reports</p>
+            </div>
+            <div class="data-card">
+                <p class="data-value">0</p>
+                <p class="data-title">Pending Reports</p>
+            </div>
+            <div class="data-card">
+                <p class="data-value">0</p>
+                <p class="data-title">Resolved Reports</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Reports -->
+    <div class="card">
+        <h2 class="section-title">Recent Reports</h2>
+        <p>View your most recent reports.</p>
+        
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>Report ID</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4" class="no-data">No reports found.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Create New Report -->
+    <div class="card">
+        <h2 class="section-title">Create a New Report</h2>
+        <form class="report-form">
+            <label for="report-title">Report Title:</label>
+            <input type="text" id="report-title" name="report-title" placeholder="Enter report title" required>
+
+            <label for="report-description">Description:</label>
+            <textarea id="report-description" name="report-description" placeholder="Enter report details" required></textarea>
+
+            <button type="submit" class="submit-btn">Submit Report</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

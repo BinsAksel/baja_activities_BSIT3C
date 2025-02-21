@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
+/* Global Variables */
+:root {
+    --primary: #ffcc00; /* Yellow */
+    --primary-hover: #e6b800; /* Darker Yellow */
+    --dark-primary: #000000; /* Black */
+    --dark-secondary: #1e1b1b;
+    --text-color: #ffffff; /* White for contrast */
+}
+
+/* General Styling */
+* {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--dark-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: var(--dark-secondary);
+    padding: 15px;
+    height: 100vh;
+}
+
+.sidebar a {
+    color: var(--primary);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: var(--primary-hover);
+    color: var(--dark-primary);
+    border-radius: 5px;
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    font-size: 28px;
+    color: var(--primary);
+}
+
+.sidebar .nav-item {
+    margin-bottom: 20px;
+}
+
+/* Main Content */
+main {
+    background-color: var(--dark-primary);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Cards */
+.card {
+    background: var(--dark-secondary);
+    color: var(--primary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Data Cards Grid */
+.card-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.data-card {
+    background: var(--primary);
+    color: var(--dark-primary);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.data-card:hover {
+    background: var(--primary-hover);
+}
+
+/* Recent Activities */
+.activity-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-list li {
+    background: var(--primary);
+    color: var(--dark-primary);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.activity-time {
+    font-weight: bold;
+    color: rgb(163, 5, 5);
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    background: var(--primary);
+    color: var(--dark-primary);
+    padding: 10px 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.action-btn:hover {
+    background: var(--dark-primary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+/* Report Table */
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.report-table th, .report-table td {
+    padding: 10px;
+    border: 1px solid var(--primary);
+}
+
+.report-table th {
+    background: var(--primary);
+    color: var(--dark-primary);
+}
+
+.no-data {
+    color: gray;
+    font-style: italic;
+}
+
+/* Report Form */
+.report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.report-form input, .report-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background: var(--dark-primary);
+    color: var(--primary);
+}
+
+.submit-btn {
+    background: var(--primary);
+    color: var(--dark-primary);
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background: var(--dark-primary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+/* Settings Page Styles */
+.settings-container {
+    max-width: 600px;
+    margin: auto;
+    background: var(--dark-primary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    color: var(--primary);
+}
+
+.settings-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.settings-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--dark-secondary);
+    border-radius: 8px;
+}
+
+.settings-section h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background: var(--dark-primary);
+    color: var(--primary);
+}
+
+.save-btn {
+    background: var(--primary);
+    color: var(--dark-primary);
+    padding: 10px 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.save-btn:hover {
+    background: var(--dark-primary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-primary);
+}
+
+/* Navbar Styles */
+.navbar {
+    background: var(--dark-primary);
+    border-bottom: 2px solid var(--primary);
+    padding: 15px;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.navbar-brand:hover {
+    color: var(--text-color);
+}
+
+/* Logout Button */
+.logout-btn {
+    color: rgb(194, 4, 4) !important;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    color: darkred !important;
+}
